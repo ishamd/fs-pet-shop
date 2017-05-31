@@ -1,5 +1,5 @@
 const fs = require('fs');
-// var path = require('path');
+
 const FILEPATH = 'pets.json';
 const data = fs.readFileSync(FILEPATH, 'utf8');
 const obj = JSON.parse(data);
@@ -20,11 +20,9 @@ const options = {
   create() {
     if (process.argv.length != 6) {
       console.error('Usage: node pets.js create AGE KIND NAME');
-      // console.log("TOO FEW ARGS");
       process.exit(1);
     } else if (isNaN(Number(process.argv[3]))) {
       console.error('Usage: node pets.js create AGE KIND NAME');
-        // console.log("AGE NAN");
       process.exit(1);
     } else {
       const pet = {
