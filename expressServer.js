@@ -3,6 +3,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const url = require('url');
 
 const app = express();
 const port = 8000;
@@ -37,6 +38,12 @@ app.get('/pets/:id', (req, res) => {
 
     res.send(pets[id]);
   });
+});
+
+app.post('/pets', (req, res) => {
+  // let query = url.parse(req.url).query;
+  // console.log(query);
+  // res.send('POST request made');
 });
 
 app.use((req, res) => {
