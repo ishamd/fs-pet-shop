@@ -40,14 +40,8 @@ app.get('/pets/:id', (req, res) => {
   });
 });
 
-app.post('/pets', (req, res) => {
-  // let query = url.parse(req.url).query;
-  // console.log(query);
-  // res.send('POST request made');
-});
-
 app.use((req, res) => {
-  // use says use this function as a piece of middleware
+  // .use says use this function as a piece of middleware
   res.sendStatus(404);
   // exits the stack/loop
 });

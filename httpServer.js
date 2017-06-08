@@ -1,11 +1,8 @@
 
 
-// const fs = require('fs');
-// const path = require('path');
 const http = require('http');
 const routes = require('./httpRoutes');
 
-// const petsPath = path.join(__dirname, 'pets.json');
 const port = process.env.PORT || 8000;
 
 const handleRequest = function (req, res) {
